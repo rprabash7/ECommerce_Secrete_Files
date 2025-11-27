@@ -1,0 +1,85 @@
+<!-- Cart Page - పూర్తిగా న్యూ HTML file "cart.html" create చేయి -->
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Laxmipati Sarees</title>
+    <link rel="stylesheet" href="cartstyle.css">
+</head>
+<body>
+    <!-- Header - పాత header code same -->
+    <header class="header">
+        <!-- Logo, Categories, Search, Cart - previous code -->
+    </header>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero">
+        <div class="container">
+            <div class="cart-header">
+                <div class="cart-title">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 10h6m-3-3v6m5 3H7a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"/>
+                    </svg>
+                    <h1>Cart</h1>
+                </div>
+                <button class="close-cart" onclick="closeCart()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Cart Section -->
+    <section class="empty-cart-section">
+        <div class="container">
+            <div class="empty-cart-content">
+                <div class="empty-cart-illustration">
+                    <svg viewBox="0 0 120 100" class="empty-cart-svg">
+                        <path d="M20 30 Q25 25 30 30 L60 30 Q65 25 70 30 L90 30 Q95 25 100 30 L110 30 Q115 25 120 30" fill="none" stroke="#e0e0e0" stroke-width="3"/>
+                        <circle cx="25" cy="18" r="3" fill="#b42c2c"/>
+                        <circle cx="95" cy="18" r="3" fill="#b42c2c"/>
+                        <rect x="10" y="35" width="100" height="30" rx="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="2"/>
+                        <text x="55" y="52" text-anchor="middle" font-size="12" fill="#999">Your cart is empty</text>
+                    </svg>
+                </div>
+                <h2>Your cart is empty</h2>
+                <p>No items in your cart. Start shopping to add items to your cart!</p>
+                <div class="empty-cart-actions">
+                    <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+                    <a href="#" class="view-categories-btn">View Categories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - పాత footer code same -->
+    <footer class="footer-section">
+        <!-- Previous footer code -->
+    </footer>
+
+    <script>
+        // Close cart functionality
+        function closeCart() {
+            window.history.back();
+        }
+
+        // Add to cart animation simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate cart count update from header
+            const cartCount = localStorage.getItem('cartCount') || 0;
+            if (cartCount > 0) {
+                showCartItems();
+            }
+        });
+
+        function showCartItems() {
+            // This will show populated cart when items are added
+            document.querySelector('.empty-cart-section').style.display = 'none';
+            // Add cart items logic here
+        }
+    </script>
+</body>
+</html>

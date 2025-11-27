@@ -1,0 +1,99 @@
+<!-- Login Page - పూర్తిగా న్యూ HTML file "login.html" create చేయి -->
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Laxmipati Sarees</title>
+    <link rel="stylesheet" href="loginpagestyle.css">
+</head>
+<body>
+    <!-- Login Wrapper -->
+    <div class="login-wrapper">
+        <div class="login-card">
+            <main class="login-main">
+                <!-- Logo -->
+                <h1 class="logo-section">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Laxmipati Sarees Logo" id="shop-logo">
+                    </a>
+                </h1>
+
+                <!-- Sign In Title -->
+                <h2>Sign in</h2>
+                <p class="login-description">Choose how you'd like to sign in</p>
+
+                <!-- Shopify Login Button -->
+                <div class="shop-login-container">
+                    <div class="shop-login-button-wrapper">
+                        <button class="shop-login-button">
+                            <span>Continue with Laxmipati</span>
+                            <div class="spinner"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- OR Separator -->
+                <div class="or-separator">
+                    <span>or</span>
+                </div>
+
+                <!-- Email Form -->
+                <form class="login-form" id="loginForm">
+                    <div class="textfield-wrapper">
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
+                        <label for="email" class="textfield-label">Email</label>
+                    </div>
+                    <button type="submit" class="continue-btn">
+                        <span class="button-content">Continue</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </form>
+            </main>
+        </div>
+
+        <!-- Login Footer -->
+        <footer class="login-footer">
+            <a href="#" class="login-footer__link">Privacy policy</a>
+            <a href="#" class="login-footer__link">Terms of service</a>
+        </footer>
+    </div>
+
+    <script>
+        // Email input floating label animation
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        emailInput.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.classList.remove('focused');
+            }
+        });
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.continue-btn');
+            const spinner = btn.querySelector('.spinner');
+            
+            btn.disabled = true;
+            spinner.classList.remove('hidden');
+            btn.querySelector('.button-content').textContent = 'Processing...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Verification code sent to your email!');
+                window.location.href = 'verify.html'; // OTP page
+            }, 2000);
+        });
+
+        // Shop login button
+        document.querySelector('.shop-login-button').addEventListener('click', function() {
+            const spinner = this.querySelector('.spinner');
+            spinner.style.display = 'block';
+            // Redirect to Shopify auth
+        });
+    </script>
+</body>
+</html>

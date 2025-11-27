@@ -1,0 +1,178 @@
+<!-- Saree Collection Page - పూర్తిగా న్యూ HTML file "saree-collection.html" create చేయి -->
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saree Collections - Laxmipati Sarees</title>
+    <link rel="stylesheet" href="sareecollection.css">
+</head>
+<body>
+    <!-- Header - మీ పాత header code -->
+    <header class="header">
+        <!-- Logo, Categories, Search, Cart, Wishlist, Account -->
+    </header>
+
+    <!-- Collection Hero Section -->
+    <section class="collection-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore Saree Collections</h1>
+                <p>Discover our premium collection of traditional and modern sarees</p>
+                <div class="hero-stats">
+                    <span>200+ Collections</span>
+                    <span>Free Shipping</span>
+                    <span>50% OFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Sort Toolbar -->
+    <section class="collection-toolbar">
+        <div class="container">
+            <div class="toolbar-left">
+                <button class="filter-btn">Filters</button>
+                <span class="results-count">128 Collections</span>
+            </div>
+            <div class="toolbar-right">
+                <select class="sort-select">
+                    <option>Best Selling</option>
+                    <option>New Arrivals</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+                <div class="layout-toggle">
+                    <button class="layout-btn active" data-layout="grid">🟥</button>
+                    <button class="layout-btn" data-layout="list">📝</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Grid -->
+    <section class="collections-grid">
+        <div class="container">
+            <div class="collections-list" id="collectionsGrid">
+                <!-- Collection 1 - Arya -->
+                <a href="#" class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://laxmipati.com/cdn/shop/files/K118-2-A.jpg?v=1685544977" alt="Arya Collection" loading="lazy">
+                        <div class="collection-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Arya</h3>
+                        <div class="collection-meta">
+                            <span>24 Sarees</span>
+                            <span class="price-range">₹1,299 - ₹4,999</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Collection 2 - Asharika -->
+                <a href="#" class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://laxmipati.com/cdn/shop/products/CN84-A.jpg?v=1669128811" alt="Asharika Collection" loading="lazy">
+                        <div class="collection-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Asharika</h3>
+                        <div class="collection-meta">
+                            <span>18 Sarees</span>
+                            <span class="price-range">₹999 - ₹3,499</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Collection 3 - Asita -->
+                <a href="#" class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://laxmipati.com/cdn/shop/products/AS-4-A.jpg?v=1664263625" alt="Asita Collection" loading="lazy">
+                        <div class="collection-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Asita</h3>
+                        <div class="collection-meta">
+                            <span>32 Sarees</span>
+                            <span class="price-range">₹1,499 - ₹5,999</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Collection 4 - Avani -->
+                <a href="#" class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://laxmipati.com/cdn/shop/products/K76-4-A.jpg?v=1676269262" alt="Avani Collection" loading="lazy">
+                        <div class="collection-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Avani</h3>
+                        <div class="collection-meta">
+                            <span>26 Sarees</span>
+                            <span class="price-range">₹1,799 - ₹6,499</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Add more collections from file:2 -->
+                <a href="#" class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://laxmipati.com/cdn/shop/products/CD-10-A.jpg?v=1664263060" alt="Avipsa Collection" loading="lazy">
+                        <div class="collection-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Avipsa</h3>
+                        <div class="collection-meta">
+                            <span>20 Sarees</span>
+                            <span class="price-range">₹1,199 - ₹4,299</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- More collections... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <!-- మీ పాత footer code -->
+    </footer>
+
+    <script>
+        // Filter toggle
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            document.querySelector('.filters-sidebar').classList.toggle('active');
+        });
+
+        // Layout toggle
+        document.querySelectorAll('.layout-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const layout = this.dataset.layout;
+                document.getElementById('collectionsGrid').className = `collections-list ${layout}`;
+            });
+        });
+
+        // Quick view modal
+        document.querySelectorAll('.quick-view').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                alert('Quick view modal opens here!');
+            });
+        });
+    </script>
+</body>
+</html>

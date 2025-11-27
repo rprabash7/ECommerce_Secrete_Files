@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saree Store - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Saree Store Logo" width="120">
+        </div>
+        
+        <!-- Categories Dropdown -->
+        <nav class="categories">
+            <select class="category-select">
+                <option>Categories</option>
+                <option>Silk Sarees</option>
+                <option>Cotton Sarees</option>
+                <option>Designer Sarees</option>
+                <option>Wedding Sarees</option>
+            </select>
+        </nav>
+        
+        <!-- Best Selling & Sarees Collection -->
+        <div class="header-sections">
+            <a href="#" class="section-link">Best Selling</a>
+            <a href="#" class="section-link">Sarees Collection</a>
+        </div>
+        
+        <!-- Right Icons -->
+        <div class="header-icons">
+            <a href="Header/wishlist.html" class="icon-link wishlist"><span>♥</span></a>
+            <div class="search-box">
+                <input type="text" placeholder="Search Sarees..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            <a href="Header/login.html" class="icon-link profile"><span>👤</span></a>
+            <a href="Header/cart.html" class="icon-link cart"><span>🛒</span> <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Slideshow -->
+    <section class="hero-banner">
+        <div class="slideshow-container">
+            <!-- Slides (previous code same) -->
+            <div class="slide active">
+                <img src="saree1.jpg" alt="Beautiful Silk Saree">
+                <div class="slide-content">
+                    <h2>Premium Silk Sarees</h2>
+                    <p>50% OFF on Wedding Collection</p>
+                    <a href="Header/hero-banner.html" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            <!-- Other slides same as before -->
+            <div class="slide">
+                <img src="saree2.jpg" alt="Designer Saree">
+                <div class="slide-content">
+                    <h2>Designer Collection</h2>
+                    <p>New Arrivals Just In!</p>
+                    <a href="#" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="saree3.jpg" alt="Cotton Saree">
+                <div class="slide-content">
+                    <h2>Cotton Sarees</h2>
+                    <p>Daily Wear Special Price</p>
+                    <a href="#" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="saree4.jpg" alt="Wedding Saree">
+                <div class="slide-content">
+                    <h2>Wedding Special</h2>
+                    <p>Luxury Collection Available</p>
+                    <a href="#" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Explore Collections Section -->
+    <section class="collections-section">
+        <div class="section-title">
+            <h2>Explore Collections</h2>
+        </div>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <img src="saree-collection.jpg" alt="Saree Collection">
+                <div class="collection-overlay">
+                    <h3>Saree</h3>
+                    <p>200+ Designs</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="kurthi-collection.jpg" alt="Kurthis Collection">
+                <div class="collection-overlay">
+                    <h3>Kurthis</h3>
+                    <p>150+ Styles</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="gown-collection.jpg" alt="Gowns Collection">
+                <div class="collection-overlay">
+                    <h3>Gowns</h3>
+                    <p>100+ Varieties</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="kurta-collection.jpg" alt="Kurta Set Collection">
+                <div class="collection-overlay">
+                    <h3>Kurta Set</h3>
+                    <p>80+ Combinations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Made for Moments Section -->
+    <section class="moments-section">
+        <div class="section-title">
+            <h2>Made for Moments</h2>
+        </div>
+        <div class="moments-grid">
+            <div class="moment-item">
+                <img src="gifting.jpg" alt="Gifting Collection">
+                <div class="moment-overlay">
+                    <h3>Gifting</h3>
+                    <p>Perfect Gifts</p>
+                </div>
+            </div>
+            <div class="moment-item">
+                <img src="daily-wear.jpg" alt="Daily Wear Collection">
+                <div class="moment-overlay">
+                    <h3>Daily Wear</h3>
+                    <p>Comfort First</p>
+                </div>
+            </div>
+            <div class="moment-item">
+                <img src="festive.jpg" alt="Festive Collection">
+                <div class="moment-overlay">
+                    <h3>Festive</h3>
+                    <p>Festival Special</p>
+                </div>
+            </div>
+            <div class="moment-item">
+                <img src="partywear.jpg" alt="Partywear Collection">
+                <div class="moment-overlay">
+                    <h3>Partywear</h3>
+                    <p>Shine Bright</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Favorites Section - పూర్తి HTML file కి తగ్గట్టు moments-section తర్వాత add చేయి -->
+<section class="favorites-section">
+    <div class="section-title">
+        <h2>Customer Favorites</h2>
+    </div>
+    <div class="favorites-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="favorite1.jpg" alt="Black Silk Printed Saree">
+                <div class="sale-badge">50% OFF</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Black Silk Printed Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,249</span>
+                    <span class="original-price">₹4,499</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="reviews">0 Reviews</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="favorite2.jpg" alt="Green Chiffon Saree">
+                <div class="sale-badge">50% OFF</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Green Chiffon Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,799</span>
+                    <span class="original-price">₹5,599</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="reviews">0 Reviews</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="favorite3.jpg" alt="Green Floral Saree">
+                <div class="sale-badge">50% OFF</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Green Floral Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,749</span>
+                    <span class="original-price">₹5,499</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="reviews">0 Reviews</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="favorite4.jpg" alt="Chiffon Printed Saree">
+                <div class="sale-badge">50% OFF</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Chiffon Printed Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,449</span>
+                    <span class="original-price">₹4,899</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="reviews">0 Reviews</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="view-all-btn">
+        <a href="#" class="view-all-link">View All Favorites</a>
+    </div>
+</section>
+
+<!-- Wear It Now Section - favorites-section తర్వాత add చేయి -->
+<section class="wearit-section">
+    <div class="section-title">
+        <h2>Wear It Now</h2>
+    </div>
+    <div class="wearit-grid">
+        <!-- Product 1 - Yellow Zing Zang -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="N-2392.jpg" alt="Yellow Zing Zang Stripe Chiffon Saree">
+                <div class="save-badge">Save ₹2,480</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Yellow Zing Zang Stripe Chiffon Saree – Parampara</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,480</span>
+                    <span class="original-price">₹4,960</span>
+                    <span class="discount">50% Off</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">☆☆☆☆☆</span>
+                    <span class="reviews">(0.0)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 - Georgette Green -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="N-2344.jpg" alt="Ready to Wear Georgette Green Saree">
+                <div class="save-badge">Save ₹2,295</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Ready to Wear Laxmipati Zill_Mill N-2344 Georgette Green Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,295</span>
+                    <span class="original-price">₹4,590</span>
+                    <span class="discount">50% Off</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">☆☆☆☆☆</span>
+                    <span class="reviews">(0.0)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 - Satin Chiffon Green -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="N-2271.jpg" alt="Satin Chiffon Green Saree">
+                <div class="save-badge">Save ₹2,480</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Ready to Wear Laxmipati Dhan_laxmi N-2271 Satin Chiffon Green Saree</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,480</span>
+                    <span class="original-price">₹4,960</span>
+                    <span class="discount">50% Off</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">☆☆☆☆☆</span>
+                    <span class="reviews">(0.0)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 4 - Mustard Satin Chiffon -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="N-2394.jpg" alt="Mustard Satin Chiffon Saree">
+                <div class="save-badge">Save ₹2,390</div>
+                <div class="quick-actions">
+                    <span class="wishlist">♥</span>
+                    <span class="quickview">👁</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Ready to Wear Mustard Satin Chiffon Saree with Stripe Print – Parampara</h3>
+                <div class="price">
+                    <span class="sale-price">₹2,390</span>
+                    <span class="original-price">₹4,780</span>
+                    <span class="discount">50% Off</span>
+                </div>
+                <div class="rating">
+                    <span class="stars">★☆☆☆☆</span>
+                    <span class="reviews">(1.0)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="view-all-btn">
+        <a href="#" class="view-all-link">View All Ready to Wear</a>
+    </div>
+</section>
+
+<!-- Happy Customers Speak Section - wearit-section తర్వాత add చేయి -->
+<section class="testimonials-section">
+    <div class="section-title">
+        <h2>Happy Customers Speak</h2>
+    </div>
+    <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+            <div class="testimonial-avatar">
+                <img src="Mask_group_7.png" alt="Shruti Sharma">
+            </div>
+            <div class="testimonial-content">
+                <h3>Shruti Sharma</h3>
+                <p>Laxmipati Saree's collection is amazing! I bought one for my anniversary and felt special. Quality and fit are great.</p>
+                <div class="testimonial-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+            <div class="testimonial-avatar">
+                <img src="Mask_group_7.png" alt="Anushka Sarkar">
+            </div>
+            <div class="testimonial-content">
+                <h3>Anushka Sarkar</h3>
+                <p>My go-to fabric store is Laxmipati Sarees! I get everything that I want to wear, right from my favorite Kurtis, shirts for office wear, and even gorgeous Lehengas for special occasions.</p>
+                <div class="testimonial-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+            <div class="testimonial-avatar">
+                <img src="Mask_group_7.png" alt="Poonam Mishra">
+            </div>
+            <div class="testimonial-content">
+                <h3>Poonam Mishra</h3>
+                <p>Was never a fan of Sarees until I got one from Laxmipati Sarees. Felt so comfortable wearing it, no rashes or irritation! Now I wear Sarees every day effortlessly.</p>
+                <div class="testimonial-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+            <div class="testimonial-avatar">
+                <img src="Mask_group_7.png" alt="Janki Shah">
+            </div>
+            <div class="testimonial-content">
+                <h3>Janki Shah</h3>
+                <p>Haven't seen Sarees and Lehengas of this variety and this price. Every product I've purchased from Laxmipati sarees have been absolute steals!</p>
+                <div class="testimonial-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Complete Footer Section - testimonials-section తర్వాత add చేయి (body tag ముందు) -->
+<footer class="footer-section">
+    <div class="footer-content">
+
+        <!-- Our Story / Helpful Pages -->
+        <div class="footer-block">
+            <h4>Our Story</h4>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">How to drape a saree?</a></li>
+                <li><a href="#">Return Centre</a></li>
+                <li><a href="#">Track Your Order</a></li>
+            </ul>
+        </div>
+
+        <!-- Help Center / Useful Links -->
+        <div class="footer-block">
+            <h4>Help Center</h4>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Best Selling Sarees</a></li>
+                <li><a href="#">Latest Sarees Collection</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-block newsletter">
+            <h4>Let's Stay Connected</h4>
+            <p>Subscribe to get notified about product launches, special offers and company news.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Social Media & Copyright -->
+    <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/HouseofLaxmipati/" target="_blank" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" class="social-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.183 21.85v-8.868H7.2V9.526h2.983V6.982a4.17 4.17 0 0 1 4.44-4.572 22.33 22.33 0 0 1 2.667.144v3.084h-1.83a1.44 1.44 0 0 0-1.713 1.68v2.208h3.423l-.447 3.456h-2.97v8.868h-3.57Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.instagram.com/houseoflaxmipati/" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" class="social-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.4c-2.607 0-2.934.011-3.958.058-1.022.046-1.72.209-2.33.446a4.705 4.705 0 0 0-1.7 1.107 4.706 4.706 0 0 0-1.108 1.7c-.237.611-.4 1.31-.446 2.331C2.41 9.066 2.4 9.392 2.4 12c0 2.607.011 2.934.058 3.958.046 1.022.209 1.72.446 2.33a4.706 4.706 0 0 0 1.107 1.7c.534.535 1.07.863 1.7 1.108.611.237 1.309.4 2.33.446 1.025.047 1.352.058 3.959.058s2.934-.011 3.958-.058c1.022-.046 1.72-.209 2.33-.446a4.706 4.706 0 0 0 1.7-1.107 4.706 4.706 0 0 0 1.108-1.7c.237-.611.4-1.31.446-2.33.047-1.025.058-1.352.058-3.959s-.011-2.934-.058-3.958c-.047-1.022-.209-1.72-.446-2.33a4.706 4.706 0 0 0-1.107-1.7 4.705 4.705 0 0 0-1.7-1.108c-.611-.237-1.31-.4-2.331-.446C14.934 2.41 14.608 2.4 12 2.4Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@laxmipatisarees_" target="_blank" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" class="social-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.44 5.243c.929.244 1.66.963 1.909 1.876.451 1.654.451 5.106.451 5.106s0 3.452-.451 5.106a2.681 2.681 0 0 1-1.91 1.876c-1.684.443-8.439.443-8.439.443s-6.754 0-8.439-.443a2.682 2.682 0 0 1-1.91-1.876c-.45-1.654-.45-5.106-.45-5.106s0-3.452.45-5.106a2.681 2.681 0 0 1 1.91-1.876c1.685-.443 8.44-.443 8.44-.443s6.754 0 8.438.443Zm-5.004 6.982L9.792 15.36V9.091l5.646 3.134Z" fill="currentColor"/></svg>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>© 2025 - Clothes Sarees | Sale</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        // Slideshow script (same as before)
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        setInterval(() => {
+            changeSlide(1);
+        }, 4000);
+        
+        function changeSlide(direction) {
+            slides[currentSlideIndex].classList.remove('active');
+            indicators[currentSlideIndex].classList.remove('active');
+            
+            currentSlideIndex += direction;
+            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+            
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
+        
+        function currentSlide(index) {
+            slides[currentSlideIndex].classList.remove('active');
+            indicators[currentSlideIndex].classList.remove('active');
+            
+            currentSlideIndex = index - 1;
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
